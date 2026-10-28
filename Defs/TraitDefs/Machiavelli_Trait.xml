@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- One trait, two degrees: Calculating (1) is the mild form, Machiavellian (2) the full one. -->
+  <TraitDef>
+    <defName>MAC_Machiavellian</defName>
+    <commonality>0.6</commonality>
+    <degreeDatas>
+      <li>
+        <label>calculating</label>
+        <degree>1</degree>
+        <commonality>1</commonality>
+        <description>{PAWN_nameDef} is always working out what someone is worth to {PAWN_objective}. {PAWN_pronoun} feels everything anyone else feels; {PAWN_pronoun} simply treats people as pieces to be placed. {PAWN_pronoun} would rather bind someone with a confidence than win an argument, and rarely lets a quarrel turn into a brawl.</description>
+        <socialFightChanceFactor>0.6</socialFightChanceFactor>
+        <statOffsets>
+          <SocialImpact>0.1</SocialImpact>
+          <NegotiationAbility>0.15</NegotiationAbility>
+          <TradePriceImprovement>0.03</TradePriceImprovement>
+        </statOffsets>
+      </li>
+      <li>
+        <label>machiavellian</label>
+        <degree>2</degree>
+        <commonality>1.75</commonality>
+        <description>{PAWN_nameDef} plays a longer game than everyone around {PAWN_objective}. {PAWN_pronoun} feels everything anyone else feels, and uses people anyway.\n\n{PAWN_pronoun} does favours deliberately and remembers who owes {PAWN_objective}. Nobody in {PAWN_possessive} debt can bring themselves to insult {PAWN_objective}. {PAWN_pronoun} rates the people around {PAWN_objective} by what they contribute, quietly enjoys watching others fall out, and needs to be thought well of. {PAWN_pronoun} is hard to rattle, but when {PAWN_pronoun} finally breaks, {PAWN_pronoun} turns on whoever {PAWN_pronoun} had already written off.</description>
+        <socialFightChanceFactor>0.35</socialFightChanceFactor>
+        <statOffsets>
+          <MentalBreakThreshold>-0.03</MentalBreakThreshold>
+          <SocialImpact>0.15</SocialImpact>
+          <NegotiationAbility>0.25</NegotiationAbility>
+          <TradePriceImprovement>0.05</TradePriceImprovement>
+        </statOffsets>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>Psychopath</li>
+      <li>Kind</li>
+    </conflictingTraits>
+  </TraitDef>
+
+</Defs>

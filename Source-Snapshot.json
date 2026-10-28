@@ -1,0 +1,91 @@
+{
+  "name": "Machiavelli",
+  "packageId": "machiavelli.trait",
+  "assemblyName": "Machiavelli",
+  "repositoryName": "rimworld-psyche-machiavelli",
+  "workshopId": "3805042227",
+  "metadataVersions": [
+    "1.6",
+    "1.7"
+  ],
+  "originalSourceUnit": "Psyche Mods/Machiavelli",
+  "sourceSnapshotUtc": "2026-10-28T17:10:12.553Z",
+  "sourceFileFingerprints": [
+    {
+      "path": "About/About.xml",
+      "sha256": "A68901020AA1B34A03EDF486457C44EE91D9A311C1DD7ACD9943D0B2876B8397",
+      "bytes": 2456
+    },
+    {
+      "path": "About/Preview.png",
+      "sha256": "CA0B3E5E7D343BDE53A865E26F2CACD0A652E342FD795C2795BF11DAE64D2D54",
+      "bytes": 143798
+    },
+    {
+      "path": "About/PublishedFileId.txt",
+      "sha256": "F8FDAFB739ECE98F973A5F60B7078526342B65F57D58D9654F89BC31B45D411F",
+      "bytes": 10
+    },
+    {
+      "path": "Defs/InteractionDefs/Machiavelli_Interactions.xml",
+      "sha256": "24A7B1388330F3B648EDCDE2A75984659F997DA82C68C2504E222BD184AC9C56",
+      "bytes": 1076
+    },
+    {
+      "path": "Defs/ThoughtDefs/Machiavelli_Thoughts.xml",
+      "sha256": "95CF05E7097429ED24E7D205F39D8DD01F93011BE3DD0E1CB56262DAAE2B74C8",
+      "bytes": 4978
+    },
+    {
+      "path": "Defs/TraitDefs/Machiavelli_Trait.xml",
+      "sha256": "0FAFD8738C03B2901CE177AC90A0384AE0C3190EC17162EE8862FFC2637078AD",
+      "bytes": 2246
+    },
+    {
+      "path": "Patches/Machiavelli_Backstories.xml",
+      "sha256": "E60F1771E0C95007C40B77E8C223B701F4C75DFC570229FD37D9D11BE5CDD472",
+      "bytes": 2815
+    },
+    {
+      "path": "Patches/Machiavelli_SociopathConflict.xml",
+      "sha256": "CF568CC295AB67F8862DF7E8BC02C4EFC99F2DFC2CB7A906423AE1E7CDCE9152",
+      "bytes": 1150
+    },
+    {
+      "path": "Source/Machiavelli/Favours.cs",
+      "sha256": "CE3EB3D5D26AE89420D439DB6CD4228C3DF797122A7FF03018689B0CEAD7EFFD",
+      "bytes": 8202
+    },
+    {
+      "path": "Source/Machiavelli/HarmonyPatches.cs",
+      "sha256": "8CF8CBECEB8F96742086ACAE3CBDB1477B77644845B1D63B70B64D7C2BD9AD21",
+      "bytes": 7565
+    },
+    {
+      "path": "Source/Machiavelli/Machiavelli.csproj",
+      "sha256": "291204C3D448AF159A1CCD65C6E290D472E0E8151765062FBA3AA2CC5F481128",
+      "bytes": 1637
+    },
+    {
+      "path": "Source/Machiavelli/MachiavelliCore.cs",
+      "sha256": "EAEE3C3B5F53560244A77F1FFDBF5AAC0B4FE4AC276F8A26B8C8AFA60A095CBD",
+      "bytes": 7909
+    },
+    {
+      "path": "Source/Machiavelli/Settings.cs",
+      "sha256": "56FED584FE94B5BCCF7ADC908BD66769F1818AFFD3320D7880ADF7E808C6CD30",
+      "bytes": 4100
+    },
+    {
+      "path": "Source/Machiavelli/Workers.cs",
+      "sha256": "E40F8C8A32993A17D5107F95BD3570B0A605C560EB4B3AAF92DC645F44B28746",
+      "bytes": 5215
+    }
+  ],
+  "stagedProjectAdjustments": [],
+  "build16": "NOT_RUN_THIS_PASS",
+  "build17": "COMPILED_AGAINST_LOCAL_1.7_API",
+  "nativePlaytest": "NOT_RUN_THIS_PUBLICATION_PASS",
+  "gameplaySourceModified": false,
+  "compiled17SHA256": "730A1E539D1ACEE398A2DF4A7165FDB034EDF87FF76BE92A69F44F473AA6CF47"
+}

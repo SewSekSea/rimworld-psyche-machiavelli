@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!--
+    Backstory weighting, in the same shape as the Sociopath mod's.
+    Every operation is marked success=Always, so a backstory another mod has removed or renamed
+    can never turn into a load error. Each list is patched twice: once for backstories that
+    already have the list, once for those that don't.
+  -->
+
+  <!-- Always Machiavellian: the professional manipulators. -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/BackstoryDef[defName="Politician57" or defName="InformationBroker77" or defName="UrbworldPolitican92"]/forcedTraits</xpath>
+    <value><MAC_Machiavellian>2</MAC_Machiavellian></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/BackstoryDef[(defName="Politician57" or defName="InformationBroker77" or defName="UrbworldPolitican92") and not(forcedTraits)]</xpath>
+    <value><forcedTraits><MAC_Machiavellian>2</MAC_Machiavellian></forcedTraits></value>
+  </Operation>
+
+  <!-- Always Calculating: people who got where they are by placing others carefully. -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/BackstoryDef[defName="HedgeFundManager54" or defName="MafiaBoss17" or defName="GangBoss49" or defName="MasterTrader65" or defName="PlanetaryDiplomat7" or defName="Recruiter14"]/forcedTraits</xpath>
+    <value><MAC_Machiavellian>1</MAC_Machiavellian></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/BackstoryDef[(defName="HedgeFundManager54" or defName="MafiaBoss17" or defName="GangBoss49" or defName="MasterTrader65" or defName="PlanetaryDiplomat7" or defName="Recruiter14") and not(forcedTraits)]</xpath>
+    <value><forcedTraits><MAC_Machiavellian>1</MAC_Machiavellian></forcedTraits></value>
+  </Operation>
+
+  <!-- Never either degree: the ones whose whole story is that they played it straight. -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/BackstoryDef[defName="UprightDiplomat49" or defName="CharityWorker36" or defName="Counselor26" or defName="AddictionCounsel60"]/disallowedTraits</xpath>
+    <value>
+      <MAC_Machiavellian>1</MAC_Machiavellian>
+      <MAC_Machiavellian>2</MAC_Machiavellian>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/BackstoryDef[(defName="UprightDiplomat49" or defName="CharityWorker36" or defName="Counselor26" or defName="AddictionCounsel60") and not(disallowedTraits)]</xpath>
+    <value>
+      <disallowedTraits>
+        <MAC_Machiavellian>1</MAC_Machiavellian>
+        <MAC_Machiavellian>2</MAC_Machiavellian>
+      </disallowedTraits>
+    </value>
+  </Operation>
+
+</Patch>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <InteractionDef>
+    <defName>MAC_Confide</defName>
+    <label>confide</label>
+    <workerClass>Machiavelli.InteractionWorker_Confide</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/DeepTalk</symbol>
+    <recipientThought>MAC_Confided</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] [confided] [RECIPIENT_nameDef] [secret].</li>
+
+        <li>confided(p=3)->confided in</li>
+        <li>confided->let slip to</li>
+        <li>confided->took aside and told</li>
+        <li>confided->quietly admitted to</li>
+        <li>confided->trusted</li>
+
+        <li>secret->something no one else knows</li>
+        <li>secret->a weakness, carefully chosen</li>
+        <li>secret->a worry that sounded genuine</li>
+        <li>secret->an old shame, possibly invented</li>
+        <li>secret->what someone else had said about them</li>
+        <li>secret->a plan they were not supposed to hear</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+
+</Defs>

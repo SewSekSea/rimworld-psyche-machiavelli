@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Given to whoever the Machiavellian confides in. The bond is real to them; the confidence may not be true. -->
+  <ThoughtDef>
+    <defName>MAC_Confided</defName>
+    <showBubble>true</showBubble>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>15</durationDays>
+    <stackLimit>300</stackLimit>
+    <stackLimitForSameOtherPawn>4</stackLimitForSameOtherPawn>
+    <stackedEffectMultiplier>0.85</stackedEffectMultiplier>
+    <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    <socialTargetDevelopmentalStageFilter>Adult</socialTargetDevelopmentalStageFilter>
+    <stages>
+      <li>
+        <label>confided in me</label>
+        <baseOpinionOffset>12</baseOpinionOffset>
+      </li>
+    </stages>
+    <thoughtToMake>MAC_ConfidedMood</thoughtToMake>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>MAC_ConfidedMood</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>4</stackLimit>
+    <stackedEffectMultiplier>0.8</stackedEffectMultiplier>
+    <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>trusted with something</label>
+        <description>They told me something they haven't told anyone else. That means something.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- The favour ledger, felt by the Machiavelli. Stage picked in code by how many favours are held. -->
+  <ThoughtDef>
+    <defName>MAC_FavoursOwed</defName>
+    <workerClass>Machiavelli.ThoughtWorker_FavoursOwed</workerClass>
+    <requiredTraits>
+      <li>MAC_Machiavellian</li>
+    </requiredTraits>
+    <requiredTraitsDegree>2</requiredTraitsDegree>
+    <stages>
+      <li>
+        <label>someone owes me</label>
+        <description>There is a debt outstanding. It will be useful eventually.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+      <li>
+        <label>people owe me</label>
+        <description>Several people here owe me something. That is a comfortable position to be in.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+      <li>
+        <label>half this colony owes me</label>
+        <description>Whatever happens here, enough of them are in my debt that it will go my way.</description>
+        <baseMoodEffect>7</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Standing: how well the Machiavellian believes they are regarded. Stage picked in code. -->
+  <ThoughtDef>
+    <defName>MAC_Standing</defName>
+    <workerClass>Machiavelli.ThoughtWorker_Standing</workerClass>
+    <requiredTraits>
+      <li>MAC_Machiavellian</li>
+    </requiredTraits>
+    <requiredTraitsDegree>2</requiredTraitsDegree>
+    <stages>
+      <li>
+        <label>people here listen to me</label>
+        <description>When I speak, this place moves. That is worth more than any of them realise.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+      <li>
+        <label>overlooked</label>
+        <description>Decisions get made around here without anyone thinking to ask me.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+      <li>
+        <label>nobody here respects me</label>
+        <description>They talk past me as though I were furniture. I will not forget which of them did that.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Divide and rule: two other colonists have fallen out. -->
+  <ThoughtDef>
+    <defName>MAC_Squabble</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>3</stackLimit>
+    <stackedEffectMultiplier>0.7</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>let them squabble</label>
+        <description>Two of them are at each other's throats. Neither is looking at me.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- How the Machiavellian rates the people around them. Opinion only; the other colonist never feels it. -->
+  <ThoughtDef>
+    <defName>MAC_Useful</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>Machiavelli.ThoughtWorker_Useful</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>worth keeping close</label>
+        <baseOpinionOffset>25</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>MAC_DeadWeight</defName>
+    <thoughtClass>Thought_SituationalSocial</thoughtClass>
+    <workerClass>Machiavelli.ThoughtWorker_DeadWeight</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>dead weight</label>
+        <baseOpinionOffset>-25</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

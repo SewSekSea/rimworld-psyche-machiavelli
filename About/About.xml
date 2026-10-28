@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Machiavelli</name>
+  <author>T&amp;B Modding</author>
+  <packageId>machiavelli.trait</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+    <li>1.7</li>
+  </supportedVersions>
+  <description>Some people don't want to hurt you. They want to own you.
+
+Adds a trait in two strengths: Calculating (mild) and Machiavellian (full). These colonists feel everything anyone else feels. They are not cold and they are not empty. They simply treat other people as moves on a board.
+
+Both strengths
+- Confide: a new interaction. They share something personal, true or not, and it binds the other person to them.
+- Patient. They rarely start social fights, and they are better at negotiating and reading people.
+
+Machiavellian only
+- Favours owed. Rescue someone, recruit them, treat them well or confide in them, and they owe you. Holding favours lifts the mood.
+- Cashing in. Someone who owes a Machiavellian a favour cannot bring themselves to insult them. The favour is spent instead.
+- Divide and rule. When two other colonists fall out, a Machiavellian quietly enjoys it.
+- Useful and dead weight. They rate colonists by what they contribute, not by warmth.
+- Standing. Being respected lifts them. Being overlooked eats at them.
+- When a Machiavellian finally breaks, they don't rampage. They turn on whoever they had already written off.
+
+Conflicts with Sociopath, Psychopath and Kind: a colonist is one thing or the other.
+
+Settings
+Options → Mod settings → Machiavelli. Adjust how long a favour lasts, how often they confide, and the two standing thresholds. Cashing in, divide and rule, the usefulness rating and standing can each be switched off.
+
+Note that switching off "useful and dead weight" also removes the targeting from their breakdowns: with nobody written off, a breakdown picks a target the ordinary way. The breakdown behaviour itself has no switches, and neither does how often the trait appears.
+
+Requires Harmony. Safe to add to an existing save. RimWorld 1.6, no DLC needed.</description>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld</li>
+    <li>sociopath.trait</li>
+    <li>squad.morale</li>
+  </loadAfter>
+</ModMetaData>
